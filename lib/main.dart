@@ -9,8 +9,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  final String clientID = 'bc17e4ac37e443d1a8ac886e1fe79ebd';
-  final String clientSecret = '5f76a8951337459e9bd5beed12a294db';
 
   // The root of the application.
   @override
