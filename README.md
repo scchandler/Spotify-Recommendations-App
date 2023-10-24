@@ -6,4 +6,5 @@ A Flutter project.
 
 ## Info
 Can run on Android or iOS devices (nothing else).
-the folder lib coontains all of the actual .dart files
+
+The folder lib contains all of the actual .dart files
