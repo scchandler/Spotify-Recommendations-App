@@ -43,7 +43,7 @@ class _LogIn extends State<LogIn> {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text(
-                      'Blocking navigation to $host',
+                      'Logging you in...',
                     ),
                   ),
                 );
@@ -175,6 +175,7 @@ class authenticate {
       // Store the access token wherever needed
     } else {
       devLog.log('Error: HTTP status ${response.statusCode}');
+      devLog.log('Error: HTTP reason ${response.reasonPhrase}: ${response.body}');
     }
   }
 
@@ -193,6 +194,8 @@ class authenticate {
       return responseData;
     } else {
       devLog.log('Error: failed to fetch user profile');
+      devLog.log('Error: HTTP status ${response.statusCode}');
+      devLog.log('Error: HTTP reason ${response.reasonPhrase}: ${response.body}');
       throw Exception('Failed to fetch user profile');
     }
   }
